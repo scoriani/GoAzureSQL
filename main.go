@@ -57,7 +57,7 @@ func databaseconnect() {
 	// Open a connection with Azure SQL
 	db, err = sql.Open("sqlserver", connString)
 	if err != nil {
-		log.Fatal("Error creating connection pool: ", err.Error())
+		log.Fatal("Error creating connection: ", err.Error())
 	}
 	ctx := context.Background()
 	// Verify that connection is open
@@ -178,7 +178,7 @@ func querydatabase() {
 	// Open database connection
 	db, err = sql.Open("sqlserver", connString)
 	if err != nil {
-		log.Fatal("Error creating connection pool: ", err.Error())
+		log.Fatal("Error creating connection: ", err.Error())
 	}
 
 	if err != nil {
@@ -244,7 +244,7 @@ func insertrecord() {
 	// Open database connection
 	db, err = sql.Open("sqlserver", connString)
 	if err != nil {
-		log.Fatal("Error creating connection pool: ", err.Error())
+		log.Fatal("Error creating connection: ", err.Error())
 	}
 	ctx := context.Background()
 	if err != nil {
@@ -294,7 +294,7 @@ func invokestoredproc() {
 	// Open database connection
 	db, err = sql.Open("sqlserver", connString)
 	if err != nil {
-		log.Fatal("Error creating connection pool: ", err.Error())
+		log.Fatal("Error creating connection: ", err.Error())
 	}
 
 	if err != nil {
